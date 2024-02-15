@@ -97,8 +97,7 @@ body {
 }
 
 .header {
-  padding-top: 43px;
-  padding-bottom: 90px;
+  padding: 43px 0 90px;
   text-align: center;
   background-color: #EFF0F2;
 }
@@ -137,15 +136,14 @@ body {
   white-space: nowrap;
 }
 .header .header__title span {
-  padding: 2.5px 7.5px 2.5px 7.5px;
+  padding: 2.5px 7.5px;
   background-color: #68478D;
   color: #ffffff;
 }
 .header .header__button {
   width: 232px;
   height: 53px;
-  margin: auto;
-  margin-bottom: 90px;
+  margin: 0 auto 90px;
   border: 2px solid rgba(0, 0, 0, 0.5019607843);
   border-radius: 2;
   line-height: 28px;
@@ -173,8 +171,7 @@ body {
 }
 
 .about-us {
-  padding-top: 129px;
-  padding-bottom: 50px;
+  padding: 129px 0 50px;
   text-align: center;
   background-color: #F8FAFA;
 }
@@ -185,7 +182,7 @@ body {
 }
 .about-us .about-us__image {
   width: 75%;
-  padding: 70px 0 70px 0;
+  padding: 70px 0;
 }
 .about-us .about-us__texts {
   width: 75%;
@@ -215,8 +212,7 @@ body {
 }
 
 .works {
-  padding-top: 123px;
-  padding-bottom: 122px;
+  padding: 123px 0 122px;
   text-align: center;
   background-color: #ffffff;
 }
@@ -225,7 +221,7 @@ body {
   max-width: 1440px;
   margin: 0 auto;
 }
-.works .works__galery {
+.works .works__gallery {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -243,8 +239,7 @@ body {
 }
 
 .team {
-  padding-top: 99px;
-  padding-bottom: 171px;
+  padding: 99px 0 171px;
   text-align: center;
   background-color: #EFF0F2;
 }
@@ -253,7 +248,7 @@ body {
   max-width: 1440px;
   margin: 0 auto;
 }
-.team .team__galery {
+.team .team__gallery {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -287,10 +282,7 @@ body {
   height: 37px;
 }
 .team .team__name {
-  padding-top: 43px;
-  padding-bottom: 12px;
-  padding-left: 38px;
-  padding-right: 38px;
+  padding: 43px 38px 12px;
   text-align: left;
   font-family: "Merriweather", serif;
   font-size: 20px;
@@ -308,8 +300,7 @@ body {
 }
 .team .team__info {
   max-height: 72px;
-  padding-left: 38px;
-  padding-right: 38px;
+  padding: 0 38px;
   letter-spacing: 0.16px;
   line-height: 24px;
   text-align: left;
@@ -330,9 +321,7 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  margin-top: 15px;
-  margin-right: 38px;
-  padding-bottom: 33px;
+  padding: 15px 38px 33px 0;
 }
 .team .team__links li {
   display: -webkit-box;
@@ -377,11 +366,10 @@ body {
 }
 
 .contact {
-  padding-top: 140px;
-  padding-bottom: 122px;
+  padding: 140px 0 122px;
   text-align: center;
   font-family: "Raleway", sans-serif;
-  background-image: url(/resources/images/main/contact-us/contact-us-background.jpg);
+  background-image: url("/resources/images/main/contact-us/contact-us-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -402,8 +390,7 @@ body {
   background-color: rgba(0, 24, 113, 0.71);
 }
 .contact .contact__info {
-  padding-left: 22.5px;
-  padding-right: 22.5px;
+  padding: 0 22.5px;
   background-color: rgba(0, 24, 113, 0.71);
 }
 .contact .contact__info-map {
@@ -417,34 +404,29 @@ body {
   font-size: 15px;
   font-weight: 400;
   color: #ffffff;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(0, 0, 0, 0);
 }
 .contact .contact__input::-webkit-input-placeholder {
-  margin: 0 0 0 0;
   font-size: 15px;
   font-weight: 400;
   color: #ffffff;
 }
 .contact .contact__input::-moz-placeholder {
-  margin: 0 0 0 0;
   font-size: 15px;
   font-weight: 400;
   color: #ffffff;
 }
 .contact .contact__input:-ms-input-placeholder {
-  margin: 0 0 0 0;
   font-size: 15px;
   font-weight: 400;
   color: #ffffff;
 }
 .contact .contact__input::-ms-input-placeholder {
-  margin: 0 0 0 0;
   font-size: 15px;
   font-weight: 400;
   color: #ffffff;
 }
 .contact .contact__input::placeholder {
-  margin: 0 0 0 0;
   font-size: 15px;
   font-weight: 400;
   color: #ffffff;
@@ -452,50 +434,74 @@ body {
 .contact .contact__input:focus {
   border-bottom: 1px solid #ffffff;
 }
+.contact .contact__input:focus::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5019607843);
+}
+.contact .contact__input:focus::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5019607843);
+}
+.contact .contact__input:focus:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5019607843);
+}
+.contact .contact__input:focus::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5019607843);
+}
+.contact .contact__input:focus::placeholder {
+  color: rgba(255, 255, 255, 0.5019607843);
+}
 .contact .contact__textarea {
   width: 100%;
   height: 105px;
-  margin-top: 2px;
-  margin-bottom: 38px;
+  margin: 2px 0 38px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   resize: none;
   font-size: 15px;
   font-weight: 400;
   color: #ffffff;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(0, 0, 0, 0);
 }
 .contact .contact__textarea::-webkit-input-placeholder {
-  margin: 0 0 0 0;
   font-size: 15px;
   font-weight: 400;
   color: #ffffff;
 }
 .contact .contact__textarea::-moz-placeholder {
-  margin: 0 0 0 0;
   font-size: 15px;
   font-weight: 400;
   color: #ffffff;
 }
 .contact .contact__textarea:-ms-input-placeholder {
-  margin: 0 0 0 0;
   font-size: 15px;
   font-weight: 400;
   color: #ffffff;
 }
 .contact .contact__textarea::-ms-input-placeholder {
-  margin: 0 0 0 0;
   font-size: 15px;
   font-weight: 400;
   color: #ffffff;
 }
 .contact .contact__textarea::placeholder {
-  margin: 0 0 0 0;
   font-size: 15px;
   font-weight: 400;
   color: #ffffff;
 }
 .contact .contact__textarea:focus {
   border-bottom: 1px solid #ffffff;
+}
+.contact .contact__textarea:focus::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5019607843);
+}
+.contact .contact__textarea:focus::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5019607843);
+}
+.contact .contact__textarea:focus:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5019607843);
+}
+.contact .contact__textarea:focus::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5019607843);
+}
+.contact .contact__textarea:focus::placeholder {
+  color: rgba(255, 255, 255, 0.5019607843);
 }
 .contact .contact__button {
   display: block;
@@ -517,8 +523,7 @@ body {
   background-color: #67CCC4;
 }
 .contact .contact__info-text {
-  padding-top: 36px;
-  padding-bottom: 33px;
+  padding: 36px 0 33px;
   text-align: left;
   line-height: 24px;
   font-size: 15px;
@@ -527,8 +532,7 @@ body {
 }
 
 .footer {
-  padding-top: 93px;
-  padding-bottom: 152px;
+  padding: 93px 0 152px;
   text-align: center;
   font-family: "Raleway", sans-serif;
   background-color: #68478D;
@@ -555,8 +559,7 @@ body {
   display: flex;
   width: 46px;
   height: 40px;
-  margin-left: 3.5px;
-  margin-right: 3.5px;
+  margin: 0 3.5px;
 }
 .footer .footer__links li a {
   -webkit-box-flex: 1;
