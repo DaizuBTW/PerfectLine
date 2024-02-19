@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital@0;1&display=swap');
+
+@import "zeroing.scss";
+
+$dark-gray: #505050;
+
+%row-cantainer {
+    max-width: 1040px;
+    margin: auto;
+}
+
+%btn {
+    padding: 10px 16px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19.35px;
+    background-color: #001871;
+    color: #ffffff;
+
+    &:hover {
+        background-color: #4B71FE;
+        color: #ffffff;
+    }
+
+    &:active {
+        background-color: #002EDA;
+        color: #ffffff;
+    }
+}
+
+%form-input {
+    width: 420px;
+    height: 38px;
+    padding: 0 16px;
+    margin: 16px 0;
+    border-radius: 4px;
+    border: 1px solid #CED4DA;
+    background-color: #ffffff;
+
+    &::placeholder {
+        color: #505050;
+    }
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+    max-height: 54px;
+    max-width: 1080px;
+    margin: auto;
+
+    .header__navigation {
+        padding: 10px 0;
+        border-radius: 4px;
+        background-color: #68478D;
+    }
+
+    .header__navigation-container {
+        padding: 0 20px;
+    }
+
+    .header__label,
+    .header__logo {
+        margin: 0;
+        padding: 0;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 24.38px;
+    }
+}
+
+.main {
+    max-width: 1080px;
+    margin: auto;
+
+    .main__container {
+        padding: 0;
+    }
+
+    .main__title-row {
+        @extend %row-cantainer;
+    }
+
+    .main__title {
+        margin: 0 0 50px 0;
+        padding: 30px 0;
+        border-bottom: 1px solid $dark-gray;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 48.41px;
+        letter-spacing: -2%;
+    }
+
+    .main__content-row {
+        @extend %row-cantainer;
+    }
+
+
+
+    .main__persones {
+        max-width: 500px;
+        padding: 0;
+    }
+
+    .main__add-person {
+        @extend %btn;
+        padding: 7.5px 31px 7.5px 16px;
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .main__person {
+        height: 50px;
+        margin: 0 0 20px;
+        align-items: center;
+        border: 1px solid $dark-gray;
+        border-radius: 4px;
+    }
+
+    .main__person-info {
+        margin: 0;
+        padding-left: 10px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+.footer {
+    max-width: 1080px;
+    margin: auto;
+    
+    .footer__container {
+        position:absolute;
+	    bottom:0;
+        width: 100%;
+        max-width: 1080px;
+        padding-bottom: 50px;
+    }
+
+    .footer__copyright {
+        text-align: center;
+        font-size: 16px;
+        line-height: 25px;
+        letter-spacing: 0.16px;
+    }
+}
+
+.form {
+    position: relative;
+    max-width: 500px;
+    padding: 20px 20px 20px 40px;
+    background-color: #F0F1F3;
+
+    .form__close {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    .form__name {
+        padding: 20px 0 37px;
+        margin: 0;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29.26px;
+        color: #152536;
+    }
+
+    .form__row {
+        max-width: 420px;
+        justify-content: space-between;
+        margin: 0 0 20px 0;
+
+        & label {
+            cursor: pointer;
+        }
+    }
+
+    .form__input-name {
+        padding: 6px 0 0;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #152536;
+    }
+
+    .form__input {
+        @extend %form-input;
+        width: 300px;
+        height: 36px;
+        margin: 0;
+    }
+
+    .form__textarea {
+        @extend %form-input;
+        width: 300px;
+        height: 116.8px;
+        padding: 16px;
+        margin: 0;
+    }
+
+    .form__input-span {
+        color: $dark-gray;
+    }
+
+    .form__input-file {
+        width: 0;
+        height: 0;
+        padding: 0;
+        opacity: 0;
+    }
+
+    .form__input-btn {
+        position: relative;
+        left: 111.5px;
+        @extend %btn;
+        height: 34px;
+        padding: 6px 12px;
+        margin: 0;
+        border-radius: 0 4px 4px 0;
+        border: none;
+        border-left: 1px solid #CED4DA;
+        line-height: 24px;
+        cursor: pointer;
+    }
+
+    .form__submit-btn {
+        @extend %btn;
+        width: 130px;
+        margin-top: 20px;
+    }
+
+    .input-file {
+        padding: 0;
+    }
+}
