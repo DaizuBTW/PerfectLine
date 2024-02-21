@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital@0;1&display=swap');
 
-@import "zeroing.scss";
-
 $dark-gray: #505050;
 
 %row-cantainer {
@@ -73,6 +71,7 @@ body {
 }
 
 .main {
+    min-height: calc(100vh - 95px - 54px);
     max-width: 1080px;
     margin: auto;
 
@@ -107,7 +106,7 @@ body {
 
     .main__add-person {
         @extend %btn;
-        padding: 7.5px 31px 7.5px 16px;
+        padding: 7.5px 16px;
         font-size: 18px;
         line-height: 25px;
     }
@@ -121,27 +120,37 @@ body {
     }
 
     .main__person-info {
+        padding-left: 8px;
         margin: 0;
-        padding-left: 10px;
         font-weight: 400;
         font-size: 18px;
         line-height: 24px;
     }
+
+    .main__person-btn {
+        padding: 0 20px 0 0;
+    }
+
+    .main__form {
+        min-height: calc(100vh - 95px - 54px);
+        position: relative;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .footer {
-    max-width: 1080px;
-    margin: auto;
-    
+    position: sticky;
+    margin-top: auto;
+
     .footer__container {
-        position:absolute;
-	    bottom:0;
         width: 100%;
         max-width: 1080px;
-        padding-bottom: 50px;
+        padding: 20px 0 50px;
     }
 
     .footer__copyright {
+        margin: 0;
         text-align: center;
         font-size: 16px;
         line-height: 25px;
@@ -150,23 +159,24 @@ body {
 }
 
 .form {
-    position: relative;
     max-width: 500px;
+    position: relative;
     padding: 20px 20px 20px 40px;
     background-color: #F0F1F3;
 
     .form__close {
-        position: absolute;
         width: 20px;
         height: 20px;
+        position: absolute;
         top: 20px;
         right: 20px;
         cursor: pointer;
     }
 
     .form__name {
-        padding: 20px 0 37px;
+        padding: 20px 20px 37px 0;
         margin: 0;
+        text-align: center;
         font-weight: 600;
         font-size: 24px;
         line-height: 29.26px;
@@ -176,11 +186,7 @@ body {
     .form__row {
         max-width: 420px;
         justify-content: space-between;
-        margin: 0 0 20px 0;
-
-        & label {
-            cursor: pointer;
-        }
+        margin: 0 20px 20px 0;
     }
 
     .form__input-name {
@@ -189,6 +195,10 @@ body {
         font-size: 16px;
         line-height: 24px;
         color: #152536;
+    }
+
+    .form__label {
+        cursor: pointer;
     }
 
     .form__input {
@@ -218,22 +228,28 @@ body {
     }
 
     .form__input-btn {
-        position: relative;
-        left: 111.5px;
-        @extend %btn;
         height: 34px;
+        position: relative;
+        left: 99.5px;
         padding: 6px 12px;
         margin: 0;
+        @extend %btn;
         border-radius: 0 4px 4px 0;
         border: none;
         border-left: 1px solid #CED4DA;
+        border-right: 1px solid #CED4DA;
         line-height: 24px;
         cursor: pointer;
+
+        &:active {
+            border-left: 1px solid #CED4DA;
+            border-right: 1px solid #CED4DA
+        }
     }
 
     .form__submit-btn {
         @extend %btn;
-        width: 130px;
+        width: 120px;
         margin-top: 20px;
     }
 

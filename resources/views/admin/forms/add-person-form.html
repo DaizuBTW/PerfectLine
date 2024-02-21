@@ -11,44 +11,65 @@
 </head>
 
 <body>
-    <form class="form" action="">
-        <img class="form__close" src="/resources/images/admin/cross.svg" alt="">
-        <p class="form__name">Create person</p>
-        <div class="row form__row">
-            <span class="col-3 form__input-name">Name</span>
-            <input class="col-10 form__input" type="text" name="name">
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark header__navigation">
+            <div class="container-fluid header__navigation-container">
+                <p class="navbar-brand col header__label">AdminPanel</p>
+                <img class="navbar-brand header__logo" src="/resources/images/admin/logo.svg" alt="">
+            </div>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="container main__container">
+            <div class="row main__content-row main__form">
+                <form class="form" action="">
+                    <img class="form__close" src="/resources/images/admin/cross.svg" alt="">
+                    <h2 class="form__name">Create person</h2>
+
+                    <div class="row form__row">
+                        <label for="name" class="col-sm col-12 form__input-name">Name</label>
+                        <input class="col-9 form__input" type="text" id="name" name="name">
+                    </div>
+                    <div class="row form__row">
+                        <label for="position" class="col-sm col-12 form__input-name">Position</label>
+                        <input class="col-9 form__input" type="text" id="position" name="position">
+                    </div>
+                    <div class="row form__row">
+                        <label for="description" class="col-sm col-12 form__input-name">Description</label>
+                        <textarea class="col-9 form__textarea" type="text" id="description"
+                            name="description"></textarea>
+                    </div>
+                    <div class="row form__row">
+                        <label for="photo" class="col-sm col-12 form__input-name">Photo</label>
+                        <label class="col-9 form__input form__label">
+                            <span class="form__input-span">Choose file</span>
+                            <input class="form__input-file" type="file" id="photo" name="photo">
+                            <span class="btn form__input-btn">Browse</span>
+                        </label>
+                    </div>
+                    <div class="row form__row">
+                        <label for="facebook" class="col-sm col-12 form__input-name">Facebook</label>
+                        <input class="col-9 form__input" type="text" id="facebook" name="facebook">
+                    </div>
+                    <div class="row form__row">
+                        <label for="mail" class="col-sm col-12 form__input-name">Mail</label>
+                        <input class="col-9 form__input" type="email" id="mail" name="mail">
+                    </div>
+                    <div class="row form__row">
+                        <label for="twitter" class="col-sm col-12 form__input-name">Twitter</label>
+                        <input class="col-9 form__input" type="text" id="twitter" name="twitter">
+                    </div>
+
+                    <input class="btn form__submit-btn" type="submit" value="Save">
+                </form>
+            </div>
         </div>
-        <div class="row form__row">
-            <span class="col-3 form__input-name">Position</span>
-            <input class="col-10 form__input" type="text" name="position">
+    </main>
+    <footer class="footer">
+        <div class="container footer__container">
+            <p class="footer__copyright">© PerfectLine</p>
         </div>
-        <div class="row form__row">
-            <span class="col-3 form__input-name">Description</span>
-            <textarea class="col-9 form__textarea" type="text" name="position" placeholder="I'm an expert in Graphics, Website and can also develop sites in WordPress, JQuery."></textarea>
-        </div>
-        <div class="row form__row">
-            <span class="col-3 form__input-name">Photo</span>
-            <label class="col-10 form__input">
-                <span class="form__input-span">Choose file</span>
-                <input class="form__input-file" type="file" name="file">        
-                <button class="btn form__input-btn">Browse</button>
-            </label>
-        </div>
-        <div class="row form__row">
-            <span class="col-3 form__input-name">Facebook</span>
-            <input class="col-10 form__input" type="text" name="facebook">
-        </div>
-        <div class="row form__row">
-            <span class="col-3 form__input-name">Mail</span>
-            <input class="col-10 form__input" type="email" name="mail">
-        </div>
-        <div class="row form__row">
-            <span class="col-3 form__input-name">Twitter</span>
-            <input class="col-10 form__input" type="text" name="twitter">
-        </div>        
-        
-        <input class="btn form__submit-btn" type="submit" value="Save">
-    </form>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
