@@ -37,7 +37,7 @@ $dark-gray: #505050;
     background-color: #ffffff;
 
     &::placeholder {
-        color: #505050;
+        color: $dark-gray;
     }
 }
 
@@ -174,12 +174,12 @@ body {
     }
 
     .form__name {
-        padding: 20px 20px 37px 0;
+        padding: 20px 20px 40px 0;
         margin: 0;
         text-align: center;
         font-weight: 600;
         font-size: 24px;
-        line-height: 29.26px;
+        line-height: 29px;
         color: #152536;
     }
 
@@ -211,7 +211,7 @@ body {
     .form__textarea {
         @extend %form-input;
         width: 300px;
-        height: 116.8px;
+        height: 115px;
         resize: none;
         padding: 16px;
         margin: 0;
@@ -251,10 +251,56 @@ body {
     .form__submit-btn {
         @extend %btn;
         width: 120px;
+        padding: 9.525px 0;
         margin-top: 20px;
     }
 
     .input-file {
         padding: 0;
+    }
+
+    .form__auth-row {
+        max-width: 420px;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 20px 0 0;
+
+    }
+
+    .form__auth-input-name {
+        padding: 0 0 20px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .form__auth-input {
+        @extend %form-input;
+        margin: 0 0 20px;
+    }
+
+    .form__auth-submit-btn {
+        @extend %btn;
+        max-width: 120px;
+        padding: 9.525px 0;
+        margin: 20px 0; 
+    }
+
+    .form__auth-error-msg {
+        display: none;
+        align-items: center;
+        padding-left: 40px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+        color: #DC3545;
+    }
+
+    .form__input-error {
+        border-color: #DC3545;
+    }
+
+    .form__input-success {
+        border-color: #28A745;
     }
 }

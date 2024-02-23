@@ -4,7 +4,7 @@
   margin: auto;
 }
 
-.form .form__submit-btn, .form .form__input-btn, .main .main__add-person {
+.form .form__auth-submit-btn, .form .form__submit-btn, .form .form__input-btn, .main .main__add-person {
   padding: 10px 16px;
   margin-bottom: 20px;
   font-weight: 600;
@@ -13,16 +13,16 @@
   background-color: #001871;
   color: #ffffff;
 }
-.form .form__submit-btn:hover, .form .form__input-btn:hover, .main .main__add-person:hover {
+.form .form__auth-submit-btn:hover, .form .form__submit-btn:hover, .form .form__input-btn:hover, .main .main__add-person:hover {
   background-color: #4B71FE;
   color: #ffffff;
 }
-.form .form__submit-btn:active, .form .form__input-btn:active, .main .main__add-person:active {
+.form .form__auth-submit-btn:active, .form .form__submit-btn:active, .form .form__input-btn:active, .main .main__add-person:active {
   background-color: #002EDA;
   color: #ffffff;
 }
 
-.form .form__textarea, .form .form__input {
+.form .form__auth-input, .form .form__textarea, .form .form__input {
   width: 420px;
   height: 38px;
   padding: 0 16px;
@@ -31,19 +31,19 @@
   border: 1px solid #CED4DA;
   background-color: #ffffff;
 }
-.form .form__textarea::-webkit-input-placeholder, .form .form__input::-webkit-input-placeholder {
+.form .form__auth-input::-webkit-input-placeholder, .form .form__textarea::-webkit-input-placeholder, .form .form__input::-webkit-input-placeholder {
   color: #505050;
 }
-.form .form__textarea::-moz-placeholder, .form .form__input::-moz-placeholder {
+.form .form__auth-input::-moz-placeholder, .form .form__textarea::-moz-placeholder, .form .form__input::-moz-placeholder {
   color: #505050;
 }
-.form .form__textarea:-ms-input-placeholder, .form .form__input:-ms-input-placeholder {
+.form .form__auth-input:-ms-input-placeholder, .form .form__textarea:-ms-input-placeholder, .form .form__input:-ms-input-placeholder {
   color: #505050;
 }
-.form .form__textarea::-ms-input-placeholder, .form .form__input::-ms-input-placeholder {
+.form .form__auth-input::-ms-input-placeholder, .form .form__textarea::-ms-input-placeholder, .form .form__input::-ms-input-placeholder {
   color: #505050;
 }
-.form .form__textarea::placeholder, .form .form__input::placeholder {
+.form .form__auth-input::placeholder, .form .form__textarea::placeholder, .form .form__input::placeholder {
   color: #505050;
 }
 
@@ -161,12 +161,12 @@ body {
   cursor: pointer;
 }
 .form .form__name {
-  padding: 20px 20px 37px 0;
+  padding: 20px 20px 40px 0;
   margin: 0;
   text-align: center;
   font-weight: 600;
   font-size: 24px;
-  line-height: 29.26px;
+  line-height: 29px;
   color: #152536;
 }
 .form .form__row {
@@ -193,7 +193,7 @@ body {
 }
 .form .form__textarea {
   width: 300px;
-  height: 116.8px;
+  height: 115px;
   resize: none;
   padding: 16px;
   margin: 0;
@@ -226,8 +226,50 @@ body {
 }
 .form .form__submit-btn {
   width: 120px;
+  padding: 9.525px 0;
   margin-top: 20px;
 }
 .form .input-file {
   padding: 0;
+}
+.form .form__auth-row {
+  max-width: 420px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 20px 0 0;
+}
+.form .form__auth-input-name {
+  padding: 0 0 20px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+}
+.form .form__auth-input {
+  margin: 0 0 20px;
+}
+.form .form__auth-submit-btn {
+  max-width: 120px;
+  padding: 9.525px 0;
+  margin: 20px 0;
+}
+.form .form__auth-error-msg {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 40px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #DC3545;
+}
+.form .form__input-error {
+  border-color: #DC3545;
+}
+.form .form__input-success {
+  border-color: #28A745;
 }
