@@ -1,5 +1,4 @@
-const contactForm = document.querySelector('[name="contact"]');
-contactForm.addEventListener("submit", beforeSend, event);
+$("#contact").submit(beforeSend, event);
 
 function beforeSend(event) {
   event.preventDefault();
@@ -8,7 +7,6 @@ function beforeSend(event) {
   const email = document.querySelector('[name="email"]').value;
   const message = document.querySelector('[name="message"]').value;
   success(name);
-
 }
 
 function success(name) {
