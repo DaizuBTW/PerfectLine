@@ -218,6 +218,8 @@ body {
     }
 
     .form__input-span {
+        display: inline-block;
+        width: 170px;
         color: $dark-gray;
     }
 
@@ -231,7 +233,7 @@ body {
     .form__input-btn {
         height: 34px;
         position: relative;
-        left: 99.5px;
+        left: 17px;
         padding: 6px 12px;
         margin: 0;
         @extend %btn;

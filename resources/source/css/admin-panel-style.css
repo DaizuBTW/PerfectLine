@@ -199,6 +199,8 @@ body {
   margin: 0;
 }
 .form .form__input-span {
+  display: inline-block;
+  width: 170px;
   color: #505050;
 }
 .form .form__input-file {
@@ -210,7 +212,7 @@ body {
 .form .form__input-btn {
   height: 34px;
   position: relative;
-  left: 99.5px;
+  left: 17px;
   padding: 6px 12px;
   margin: 0;
   border-radius: 0 4px 4px 0;
