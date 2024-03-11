@@ -11,14 +11,14 @@
 %container-title {
     padding-bottom: 12px;
     line-height: 28px;
-    letter-spacing: 2.29px;
+    letter-spacing: 2.3px;
     @include fontz(38px, 700, #000000);
     text-transform: uppercase;
 }
 
 %container-subtitle {
     line-height: 28px;
-    letter-spacing: 1.08px;
+    letter-spacing: 1.1px;
     @include fontz(18px, 400, #000000);
     font-family: 'Merriweather', serif;
     text-transform: uppercase;
@@ -187,9 +187,12 @@ body {
     }
 
     .works__card {
-        width: 370px;
-        height: 359px;
         margin: 7.5px;
+
+        & a img {
+            width: 370px;
+            height: 359px;
+        }
     }
 }
 
@@ -349,6 +352,11 @@ body {
 
     .contact__info-map {
         padding-bottom: 20px;
+
+        & iframe {
+            width: 455px;
+            height: 224px;
+        }
     }
 
     .contact__input {
@@ -468,12 +476,275 @@ body {
 
                 &:active {
                     opacity: 100%;
-                
+
                     & svg {
                         fill: #ffffff;
                     }
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .header {
+        padding: 20px 20px 40px;
+
+        .header__container {
+            max-width: 768px;
+        }
+
+        .header__link {
+            right: 0;
+            visibility: hidden;
+            font-size: 0;
+        }
+
+        .header__link::after {
+            content: "ADMIN";
+            visibility: visible;
+            font-size: 18px;
+
+        }
+
+        .header__logo {
+            width: 180px;
+            height: 100px;
+            margin-bottom: 30px;
+        }
+
+        .header__logos {
+            display: none;
+        }
+
+        .header__button {
+            margin: 0;
+            width: 100%;
+            height: 60px;
+            max-width: 232px;
+        }
+    }
+
+    .about-us {
+        padding: 40px 20px;
+
+        .about-us__container {
+            max-width: 768px;
+        }
+
+        .about-us__image {
+            width: 100%;
+            padding: 20px 0 30px;
+        }
+
+        .about-us__texts {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .about-us__text:last-child {
+            width: 100%;
+            padding-top: 30px;
+            margin: 0;
+        }
+
+        
+    }
+
+    .works {
+        padding: 40px 20px;
+
+        .works__container {
+            max-width: 768px;
+        }
+
+        .works__gallery {
+            padding-top: 40px;
+            gap: 40px;
+        }
+
+        .works__card {
+            margin: 0;
+
+            & a img {
+                width: 100%;
+                height: 100%;
+                max-width: 320px;
+            }
+        }
+    }
+
+    .team {
+        padding: 40px 20px 0;
+
+        .team__container {
+            max-width: 768px;
+        }
+
+        .team__gallery {
+            padding: 30px 0 40px;
+            gap: 40px;
+        }
+
+        .team__pop-up-card {
+            top: 120px;
+            left: 0;
+            margin: 0 10px;
+            width: 100%;
+            max-width: 300px;
+            min-height: 172px;
+            max-height: 240px;
+        }
+
+        .team__triangle {
+            top: 102px;
+            left: 30px;
+        }
+
+        .team__name {
+            padding: 30px 20px 0;
+            letter-spacing: 0.6px;
+        }
+
+        .team__info {
+            padding: 0 20px;
+            margin: 20px 0 30px;
+        }
+
+        .team__links {
+            justify-content: space-around;
+            padding: 0 0 20px 0;
+        }
+
+        .team__card {
+            margin: 0;
+        }
+
+        .team__photo {
+            width: 100%;
+            height: 100%;
+            max-width: 320px;
+            border: 1px solid #000000;
+        }
+    }
+
+    .contact {
+        padding: 40px 20px;
+        background: #ffffff;
+
+        .contact__inner {
+            flex-direction: column;
+            max-width: 768px;
+        }
+
+        .contact__form {
+            width: 100%;
+            padding: 20px 20px 50px;
+            margin: 0 0 40px;
+        }
+
+        .contact__info {
+            padding: 20px 0 0;
+        }
+
+        .contact__info-text {
+            padding: 0 20px 20px;
+        }
+
+        .contact__info-map {
+            padding: 0;
+            height: 250px;
+
+            & iframe {
+                width: 100%;
+                height: 250px;
+            }
+        }
+
+        .contact__textarea {
+            height: 100px;
+            margin: 0 0 50px;
+        }
+
+        .contact__button {
+            width: 100%;
+            max-width: 244px;
+            height: 50px;
+            margin: auto;
+        }
+    }
+
+    .footer {
+        padding: 30px 0 90px;
+
+        .footer__title {
+            padding-bottom: 20px;
+            line-height: 20px;
+        }
+
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header {
+        .header__title {
+            margin-bottom: 30px;
+            line-height: 43px;
+            letter-spacing: 2.7px;
+            @include fontz(20px, 700, #505050);
+            white-space: nowrap;
+
+            & span {
+                line-height: 25px;
+                padding: 9px 34px;
+                background-color: #68478D;
+                color: #ffffff;
+            }
+        }
+    }
+
+    .about-us {
+        .about-us__title {
+            padding-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .about-us__subtitle {
+            font-size: 14px;
+        }
+
+        .about-us__text h3 {
+            font-size: 14px;
+        }
+
+        .about-us__text p {
+            padding-top: 12px;
+            line-height: 17px;
+            font-size: 14px;
+        }
+    }
+
+    .works {
+        .works__title {
+            padding-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .works__subtitle {
+            font-size: 14px;
+            line-height: 17px;
+        }
+    }
+
+    .team {
+        .team__title {
+            padding-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .team__subtitle {
+            font-size: 14px;
+            line-height: 17px;
         }
     }
 }
