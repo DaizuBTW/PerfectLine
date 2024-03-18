@@ -86,8 +86,8 @@
             event.preventDefault();
             const photoSpan = document.querySelector('[id="photo-span"]');
             const fileName = photo.files[0].name;
-            if (fileName.length > 20) {
-                const fileNameStart = fileName.slice(0, 11);
+            if (fileName.length > 12) {
+                const fileNameStart = fileName.slice(0, 5);
                 const fileNameEnd = fileName.slice(-6, fileName.length);
                 photoSpan.innerHTML = fileNameStart + "..." + fileNameEnd;
             } else {
