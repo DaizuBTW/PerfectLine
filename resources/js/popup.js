@@ -1,3 +1,6 @@
-( function ($) {
-    $.cartonbox();
-})(jQuery);
+// ( function ($) {
+//     $.cartonbox();
+// })(jQuery);
+
+Fancybox.bind(`[data-fancybox="gallery"]`, {
+});
