@@ -1,0 +1,9 @@
+<?php
+return [
+    'host' => '',
+    'nameDB' => '',
+    'password' => '',
+    'username' => '',
+    'charset' => 'utf8'
+];
+?>
