@@ -15,22 +15,22 @@ class Database
         return $this;
     }
 
-    public function prepare(string $sql)
+    public function execute($sql)
     {
         $statement = $this->pdo->prepare($sql);
-        return $statement;
+        return $statement->execute();
     }
 
-    public function execute($statement, ?array $params = null)
+    public function query($sql)
     {
-        return $statement->execute($params);
-    }
-
-    public function query(string $sql)
-    {
-        $pdo = $this->pdo;
-        $statement = $pdo->query($sql);
-        return $statement;
+        $statement = $this->pdo->prepare($sql);
+        $statement->execute();
+        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+        if ($result === false) {
+            return [];
+        } else {
+            return $result;
+        }
     }
 }
 
