@@ -33,15 +33,3 @@ class Database
         }
     }
 }
-
-//  Временно
-try {
-    $dbh = new Database;
-    foreach ($dbh->query('SELECT * from dictionary') as $row) {
-        print_r($row);
-    }
-    $dbh = null;
-} catch (PDOException $e) {
-    print "Error!: " . $e->getMessage() . "<br/>";
-    die();
-}
