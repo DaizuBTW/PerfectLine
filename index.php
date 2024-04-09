@@ -110,6 +110,56 @@
                 $name4 = "Jamal Hammer";
                 $name5 = "Arnold Smith";
                 $name6 = "Emma Smith";
+                $team = [
+                    1 => [
+                        "Name" => "Jessica Alba",
+                        "Position" => "CEO",
+                        "Info" => "I have experience in building websites for startups and enterprisees. For working on software development projocts I always focus on the details of the work.",
+                        "LinkInstagram" => "https://www.instagram.com/",
+                        "LinkFacebook" => "https://www.facebook.com/",
+                        "LinkEmail" => "mail@perfectline.com"
+                    ],
+                    2 => [
+                        "Name" => "Al Rayhan",
+                        "Position" => "UI Designer",
+                        "Info" => "I'm an expert in Graphics, Website and can also develop sites in WordPress, JQuery.",
+                        "LinkInsagram" => "https://www.instagram.com/",
+                        "LinkFacebook" => "https://www.facebook.com/",
+                        "LinkEmail" => "mail@perfectline.com"
+                    ],
+                    3 => [
+                        "Name" => "Jamal Hammer",
+                        "Position" => "Junior",
+                        "Info" => "Self-motivated professional with strong work ethic. Team player - Participated in multiplie projects, joining large teams, effectively co-working with other professionals.",
+                        "LinkInsagram" => "https://www.instagram.com/",
+                        "LinkFacebook" => "https://www.facebook.com/",
+                        "LinkEmail" => "mail@perfectline.com"
+                    ],
+                    4 => [
+                        "Name" => "Arnold Smith",
+                        "Position" => "Middle QA",
+                        "Info" => "I represent a high-experienced team that has strong skills in Website Development and Graphic.",
+                        "LinkInsagram" => "https://www.instagram.com/",
+                        "LinkFacebook" => "https://www.facebook.com/",
+                        "LinkEmail" => "mail@perfectline.com"
+                    ],
+                    5 => [
+                        "Name" => "Nina Dobrev",
+                        "Position" => "Senior QA",
+                        "Info" => "Professional software developer with over 15 years of overall experience in software development and maintenance looking for challenge projects fit my skills.",
+                        "LinkInsagram" => "https://www.instagram.com/",
+                        "LinkFacebook" => "https://www.facebook.com/",
+                        "LinkEmail" => "mail@perfectline.com"
+                    ],
+                    6 => [
+                        "Name" => "Emma Smith",
+                        "Position" => "Team Lead",
+                        "Info" => "I am a full-stack developer having 12+ years of work experience in this domain and now working with a strong and dedicated team of specialist developers.",
+                        "LinkInsagram" => "https://www.instagram.com/",
+                        "LinkFacebook" => "https://www.facebook.com/",
+                        "LinkEmail" => "mail@perfectline.com"
+                    ]
+                ]
             ?>
             <div class="team__container">
                 <div class="team__label">
@@ -117,27 +167,11 @@
                     <h3 class="team__subtitle">We are web development professionals who create exclusive software</h3>
                 </div>
                 <div class="team__gallery">
-                    <div class="team__card">
-                        <img class="team__photo" src="resources/images/main/small-team/team1.jpg" alt="">
-                        <img class="team__triangle" src="resources/images/main/small-team/pop-up-triangle.svg">
-                        <div class="team__pop-up-card">
-                            <p class="team__name"><?= $name1 ?> <span class="team__position">/ Position</span></p>
-                            <p class="team__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto,
-                                dolore. Vel, accusantium soluta. Perspiciatis incidunt consectetur sequi illo, tempore
-                                quam omnis quaerat placeat accusamus officia nulla atque ea voluptas nostrum.</p>
-                            <ul class="team__links">
-                                <li>
-                                    <a href="https://www.instagram.com/" target="_blank"><img src="resources/images/main/small-team/instagram-icon.svg" alt="instagram"></a>
-                                </li>
-                                <li>
-                                    <a href="https://www.facebook.com/" target="_blank"><img src="resources/images/main/small-team/facebook-icon.svg" alt="Facebook"></a>
-                                </li>
-                                <li>
-                                    <a href="mailto:mail@perfectline.com" target="_blank"><img src="resources/images/main/small-team/mail-icon.svg" alt="Mail"></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                <?php 
+                foreach ($team as $emploee){
+                    require "./resources/views/layouts/person-template.php";
+                }
+                ?>
                     <div class="team__card">
                         <img class="team__photo" src="resources/images/main/small-team/team2.jpg" alt="">
                         <img class="team__triangle" src="resources/images/main/small-team/pop-up-triangle.svg">
