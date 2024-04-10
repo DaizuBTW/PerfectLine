@@ -109,9 +109,6 @@
                 <div class="team__gallery">
                     <?php 
                         require "./controller/all-info-team.php";
-                        foreach ($team as $emploee){
-                            require "./resources/views/layouts/person-template.php";
-                        }
                     ?>
                 </div>
             </div>
