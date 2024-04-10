@@ -264,11 +264,11 @@ body {
 .team .team__pop-up-card {
   display: none;
   position: absolute;
-  top: 184px;
-  left: 18px;
-  width: 335px;
+  top: 174px;
+  left: 35px;
+  width: 300px;
   min-height: 172px;
-  max-height: 241px;
+  max-height: 246px;
   border: 1px solid #000000;
   background-color: #EFF0F2;
   -webkit-box-shadow: 2.7000000477px 6.4000000954px 16px 0px rgba(20, 20, 21, 0.1803921569);
@@ -277,14 +277,14 @@ body {
 .team .team__triangle {
   display: none;
   position: absolute;
-  top: 165px;
-  left: 29px;
+  top: 155px;
+  left: 55px;
   z-index: 1;
   width: 42px;
   height: 37px;
 }
 .team .team__name {
-  padding: 43px 38px 12px;
+  padding: 30px 30px 20px;
   text-align: left;
   font-family: "Merriweather", serif;
   font-size: 20px;
@@ -302,7 +302,7 @@ body {
 }
 .team .team__info {
   max-height: 72px;
-  padding: 0 38px;
+  padding: 0 30px;
   letter-spacing: 0.16px;
   line-height: 24px;
   text-align: left;
@@ -320,10 +320,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  padding: 15px 38px 33px 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px 30px;
 }
 .team .team__links li {
   display: -webkit-box;
