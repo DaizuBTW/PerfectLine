@@ -1,3 +1,9 @@
+<?php 
+require "./controller/connection-to-database.php";
+require "./model/queries.php";
+$db = new Database;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

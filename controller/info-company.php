@@ -1,9 +1,6 @@
 <?php
-
-require_once "./controller/connection-to-database.php";
-require_once "./model/queries.php";
-$db = new Database;
-$info = getCompanyInfo($db);
+$table = "InfoCompany";
+$info = getFromTable($db, $table);
 
 foreach ($info as $item):
 ?>
