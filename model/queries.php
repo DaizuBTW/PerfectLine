@@ -5,3 +5,8 @@ function getAllEmploees(&$db) {
     return $result;
 }
 
+function getCompanyInfo(&$db) {
+    $result = $db->query("SELECT * FROM InfoCompany");
+    return $result;
+}
+

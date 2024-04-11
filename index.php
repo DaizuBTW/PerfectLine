@@ -37,27 +37,9 @@
                     <h3 class="about-us__subtitle">main information of our company</h3>
                 </div>
                 <img class="about-us__image" src="resources/images/main/about-us/about.jpg" alt="About us">
-                <div class="about-us__texts">
-                    <div class="about-us__text">
-                        <h3>We Actually Do amazing works</h3>
-                        <p>
-                            We specialize in creating custom web design that are crafted to meet your brand, design and
-                            functionality needs. Our
-                            websites are easy to edit, update and manage allowing you to keep your website content fresh
-                            and
-                            relevant. We ensure our
-                            websites work well on desktop computers as well as on mobile devices.
-                        </p>
-                    </div>
-                    <div class="about-us__text">
-                        <h3>why are WE great?</h3>
-                        <p>
-                            PerfectLine is a full-service web design & development
-                            firm. We provide web design, web application, web portal,
-                            e-commerce solution and online marketing.
-                        </p>
-                    </div>
-                </div>
+                <?php 
+                    require "./controller/info-company.php";
+                ?>
             </div>
         </section>
         <section class="works">
