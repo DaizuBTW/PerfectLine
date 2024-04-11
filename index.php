@@ -4,11 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="refresh" content="15"> <!-- Временно -->
     <title>PerfectLine</title>
 
     <link rel="stylesheet" href="resources/source/css/style.css">
-    <!-- <link rel="stylesheet" href="resources/source/css/cartonbox.min.css"> -->
     <script src="resources/js/fancybox.umd.js"></script>
     <link rel="stylesheet" href="resources/source/css/fancybox.css">
 </head>
@@ -103,137 +101,15 @@
             </div>
         </section>
         <section class="team">
-            <?php 
-                $name1 = "Jessica Alba";
-                $name2 = "Al Rayhan";
-                $name3 = "Nina Dobrev";
-                $name4 = "Jamal Hammer";
-                $name5 = "Arnold Smith";
-                $name6 = "Emma Smith";
-            ?>
             <div class="team__container">
                 <div class="team__label">
                     <h2 class="team__title">SMALL TEAM</h2>
                     <h3 class="team__subtitle">We are web development professionals who create exclusive software</h3>
                 </div>
                 <div class="team__gallery">
-                    <div class="team__card">
-                        <img class="team__photo" src="resources/images/main/small-team/team1.jpg" alt="">
-                        <img class="team__triangle" src="resources/images/main/small-team/pop-up-triangle.svg">
-                        <div class="team__pop-up-card">
-                            <p class="team__name"><?= $name1 ?> <span class="team__position">/ Position</span></p>
-                            <p class="team__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto,
-                                dolore. Vel, accusantium soluta. Perspiciatis incidunt consectetur sequi illo, tempore
-                                quam omnis quaerat placeat accusamus officia nulla atque ea voluptas nostrum.</p>
-                            <ul class="team__links">
-                                <li>
-                                    <a href="https://www.instagram.com/" target="_blank"><img src="resources/images/main/small-team/instagram-icon.svg" alt="instagram"></a>
-                                </li>
-                                <li>
-                                    <a href="https://www.facebook.com/" target="_blank"><img src="resources/images/main/small-team/facebook-icon.svg" alt="Facebook"></a>
-                                </li>
-                                <li>
-                                    <a href="mailto:mail@perfectline.com" target="_blank"><img src="resources/images/main/small-team/mail-icon.svg" alt="Mail"></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="team__card">
-                        <img class="team__photo" src="resources/images/main/small-team/team2.jpg" alt="">
-                        <img class="team__triangle" src="resources/images/main/small-team/pop-up-triangle.svg">
-                        <div class="team__pop-up-card">
-                            <p class="team__name"><?= $name2 ?> <span class="team__position">/ UI Designer</span></p>
-                            <p class="team__info">I'm an expert in Graphics, <br>Website and can also develop <br>sites
-                                in WordPress, JQuery.</p>
-                            <ul class="team__links">
-                                <li>
-                                    <a href="https://www.instagram.com/" target="_blank"><img src="resources/images/main/small-team/instagram-icon.svg" alt="instagram"></a>
-                                </li>
-                                <li>
-                                    <a href="https://www.facebook.com/" target="_blank"><img src="resources/images/main/small-team/facebook-icon.svg" alt="Facebook"></a>
-                                </li>
-                                <li>
-                                    <a href="mailto:mail@perfectline.com" target="_blank"><img src="resources/images/main/small-team/mail-icon.svg" alt="Mail"></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="team__card">
-                        <img class="team__photo" src="resources/images/main/small-team/team3.jpg" alt="">
-                        <img class="team__triangle" src="resources/images/main/small-team/pop-up-triangle.svg">
-                        <div class="team__pop-up-card">
-                            <p class="team__name"><?= $name3 ?> <span class="team__position">/ Position</span></p>
-                            <p class="team__info"></p>
-                            <ul class="team__links">
-                                <li>
-                                    <a href="https://www.instagram.com/" target="_blank"><img src="resources/images/main/small-team/instagram-icon.svg" alt="instagram"></a>
-                                </li>
-                                <li>
-                                    <a href="https://www.facebook.com/" target="_blank"><img src="resources/images/main/small-team/facebook-icon.svg" alt="Facebook"></a>
-                                </li>
-                                <li>
-                                    <a href="mailto:mail@perfectline.com" target="_blank"><img src="resources/images/main/small-team/mail-icon.svg" alt="Mail"></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="team__card">
-                        <img class="team__photo" src="resources/images/main/small-team/team4.jpg" alt="">
-                        <img class="team__triangle" src="resources/images/main/small-team/pop-up-triangle.svg">
-                        <div class="team__pop-up-card">
-                            <p class="team__name"><?= $name4 ?> <span class="team__position">/ Position</span></p>
-                            <p class="team__info">Info</p>
-                            <ul class="team__links">
-                                <li>
-                                    <a href="https://www.instagram.com/" target="_blank"><img src="resources/images/main/small-team/instagram-icon.svg" alt="instagram"></a>
-                                </li>
-                                <li>
-                                    <a href="https://www.facebook.com/" target="_blank"><img src="resources/images/main/small-team/facebook-icon.svg" alt="Facebook"></a>
-                                </li>
-                                <li>
-                                    <a href="mailto:mail@perfectline.com" target="_blank"><img src="resources/images/main/small-team/mail-icon.svg" alt="Mail"></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="team__card">
-                        <img class="team__photo" src="resources/images/main/small-team/team5.jpg" alt="">
-                        <img class="team__triangle" src="resources/images/main/small-team/pop-up-triangle.svg">
-                        <div class="team__pop-up-card">
-                            <p class="team__name"><?= $name5 ?> <span class="team__position">/ Position</span></p>
-                            <p class="team__info">Info</p>
-                            <ul class="team__links">
-                                <li>
-                                    <a href="https://www.instagram.com/" target="_blank"><img src="resources/images/main/small-team/instagram-icon.svg" alt="instagram"></a>
-                                </li>
-                                <li>
-                                    <a href="https://www.facebook.com/" target="_blank"><img src="resources/images/main/small-team/facebook-icon.svg" alt="Facebook"></a>
-                                </li>
-                                <li>
-                                    <a href="mailto:mail@perfectline.com" target="_blank"><img src="resources/images/main/small-team/mail-icon.svg" alt="Mail"></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="team__card">
-                        <img class="team__photo" src="resources/images/main/small-team/team6.jpg" alt="">
-                        <img class="team__triangle" src="resources/images/main/small-team/pop-up-triangle.svg">
-                        <div class="team__pop-up-card">
-                            <p class="team__name"><?= $name6 ?> <span class="team__position">/ Position</span></p>
-                            <p class="team__info">Info</p>
-                            <ul class="team__links">
-                                <li>
-                                    <a href="https://www.instagram.com/" target="_blank"><img src="resources/images/main/small-team/instagram-icon.svg" alt="instagram"></a>
-                                </li>
-                                <li>
-                                    <a href="https://www.facebook.com/" target="_blank"><img src="resources/images/main/small-team/facebook-icon.svg" alt="Facebook"></a>
-                                </li>
-                                <li>
-                                    <a href="mailto:mail@perfectline.com" target="_blank"><img src="resources/images/main/small-team/mail-icon.svg" alt="Mail"></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    <?php 
+                        require "./controller/all-info-team.php";
+                    ?>
                 </div>
             </div>
         </section>

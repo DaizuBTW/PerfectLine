@@ -10,7 +10,7 @@ class Database
 
     private function connection()
     {
-        $data = require_once "../model/data-array-for-database.php";
+        $data = require_once "./model/data-array-for-database.php";
         $this->pdo = new PDO("mysql:host=$data[host];dbname=$data[nameDB];charset-$data[charset]", "$data[username]", "$data[password]");
         return $this;
     }
