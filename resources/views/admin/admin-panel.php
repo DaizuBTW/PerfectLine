@@ -1,3 +1,10 @@
+<?php 
+$root = $_SERVER['DOCUMENT_ROOT'];
+require "$root/controller/connection-to-database.php";
+require "$root/model/queries.php";
+$db = new Database;
+$templatePath = "../layouts/admin/admin-person-template.php"
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,41 +35,11 @@
             <div class="row main__content-row">
                 <div class="col-6 main__persones">
                     <button type="button" class="btn main__add-person">Add new person</button>
-                    <div class="row main__person">
-                        <div class="col">
-                            <p class="main__person-info">Jessica Alba - CEO</p>
-                        </div>
-                        <div class="col-lg-1 col-md-2 main__person-btn">
-                            <a href="#edit"><img src="/resources/images/admin/edit.svg" alt="Edit"></a>
-                        </div>
-                        <div class="col-lg-1 col-md-2 main__person-btn">
-                            <a href="#delete"><img src="/resources/images/admin/delete.svg" alt="Delete"></a>
-                        </div>
-                    </div>
-                    <div class="row main__person">
-                        <div class="col">
-                            <p class="main__person-info">Al Rayhan - Ul Designer</p>
-                        </div>
-                        <div class="col-lg-1 col-md-2 main__person-btn">
-                            <a href="#edit"><img src="/resources/images/admin/edit.svg" alt="Edit"></a>
-                        </div>
-                        <div class="col-lg-1 col-md-2 main__person-btn">
-                            <a href="#delete"><img src="/resources/images/admin/delete.svg" alt="Delete"></a>
-                        </div>
-                    </div>
-                    <div class="row main__person">
-                        <div class="col">
-                            <p class="main__person-info">Jamal Hammer - Junior</p>
-                        </div>
-                        <div class="col-lg-1 col-md-2 main__person-btn">
-                            <a href="#edit"><img src="/resources/images/admin/edit.svg" alt="Edit"></a>
-                        </div>
-                        <div class="col-lg-1 col-md-2 main__person-btn">
-                            <a href="#delete"><img src="/resources/images/admin/delete.svg" alt="Delete"></a>
-                        </div>
-                    </div>
+                    <?php
+                    require "$root/controller/all-info-team.php";
+                    printEmploees($templatePath);
+                    ?>
                 </div>
-
             </div>
         </div>
     </main>

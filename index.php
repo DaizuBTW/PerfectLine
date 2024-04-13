@@ -1,7 +1,9 @@
 <?php 
+$root = $_SERVER['DOCUMENT_ROOT'];
 require "./controller/connection-to-database.php";
 require "./model/queries.php";
 $db = new Database;
+$emploeeTemplatePath = "./resources/views/layouts/person-template.php";
 ?>
 
 <!DOCTYPE html>
@@ -97,6 +99,7 @@ $db = new Database;
                 <div class="team__gallery">
                     <?php 
                         require "./controller/all-info-team.php";
+                        printEmploees($emploeeTemplatePath);
                     ?>
                 </div>
             </div>
