@@ -34,7 +34,7 @@ $templatePath = "../layouts/admin/admin-person-template.php"
 
             <div class="row main__content-row">
                 <div class="col-6 main__persones">
-                    <button type="button" class="btn main__add-person">Add new person</button>
+                    <a href="/resources/views/admin/forms/add-person-form.php" class="btn main__add-person">Add new person</a>
                     <?php
                     require "$root/controller/all-info-team.php";
                     printEmploees($templatePath);

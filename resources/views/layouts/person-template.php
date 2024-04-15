@@ -1,5 +1,5 @@
 <div class="team__card">
-    <img class="team__photo" src="resources/images/main/small-team/team1.jpg" alt="<?= $emploee['Name'] ?>">
+    <img class="team__photo" src="resources/images/main/small-team/<?= $emploee['Image'] ?>" alt="<?= $emploee['Name'] ?>">
     <img class="team__triangle" src="resources/images/main/small-team/pop-up-triangle.svg">
     <div class="team__pop-up-card">
         <p class="team__name"><?= $emploee['Name'] ?> <span class="team__position">/ <?= $emploee['Position'] ?></span></p>

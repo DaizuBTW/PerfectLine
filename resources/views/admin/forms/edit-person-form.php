@@ -22,7 +22,7 @@
     <main class="main">
         <div class="container main__container">
             <div class="row main__content-row main__form">
-                <form class="form" action="">
+                <form class="form" action="/model/upload-image.php" enctype="multipart/form-data" method="post">
                     <img class="form__close" src="/resources/images/admin/cross.svg" alt="Exit">
                     <h1 class="form__name">Edit person</h1>
 

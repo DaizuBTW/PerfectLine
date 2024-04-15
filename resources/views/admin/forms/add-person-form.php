@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="/resources/source/css/admin-panel-style.css">
     <title>Create person</title>
 </head>
@@ -22,8 +21,8 @@
     <main class="main">
         <div class="container main__container">
             <div class="row main__content-row main__form">
-                <form class="form" name="add" action="">
-                    <img class="form__close" src="/resources/images/admin/cross.svg" alt="Exit">
+                <form class="form" name="add" action="/controller/admin/add-person.php" enctype="multipart/form-data" method="post">
+                    <a href="/resources/views/admin/admin-panel.php"><img class="form__close" src="/resources/images/admin/cross.svg" alt="Exit"></a>
                     <h1 class="form__name">Create person</h1>
 
                     <div class="row form__row">
@@ -36,17 +35,19 @@
                     </div>
                     <div class="row form__row">
                         <label for="description" class="col-sm col-12 form__input-name">Description</label>
-                        <textarea class="col-9 form__textarea" type="text" id="description"
-                            name="description"></textarea>
+                        <textarea class="col-9 form__textarea" type="text" id="description" name="description"></textarea>
                     </div>
                     <div class="row form__row">
                         <label for="photo" class="col-sm col-12 form__input-name">Photo</label>
                         <label class="col-9 form__input form__label">
                             <span class="form__input-span" id="photo-span">Choose file</span>
-                            <input class="form__input-file" type="file" id="photo" name="photo"
-                                accept=".jpg,.jpeg,.png">
+                            <input class="form__input-file" type="file" id="photo" name="photo" accept=".jpg,.jpeg,.png">
                             <span class="btn form__input-btn">Browse</span>
                         </label>
+                    </div>
+                    <div class="row form__row">
+                        <label for="instagrm" class="col-sm col-12 form__input-name">Instagram</label>
+                        <input class="col-9 form__input" type="text" id="instagram" name="instagram">
                     </div>
                     <div class="row form__row">
                         <label for="facebook" class="col-sm col-12 form__input-name">Facebook</label>
@@ -56,11 +57,6 @@
                         <label for="mail" class="col-sm col-12 form__input-name">Mail</label>
                         <input class="col-9 form__input" type="email" id="mail" name="mail">
                     </div>
-                    <div class="row form__row">
-                        <label for="twitter" class="col-sm col-12 form__input-name">Twitter</label>
-                        <input class="col-9 form__input" type="text" id="twitter" name="twitter">
-                    </div>
-
                     <input class="btn form__submit-btn" type="submit" value="Save">
                 </form>
             </div>
@@ -72,12 +68,10 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
-        </script>
-    <script src="https://code.jquery.com/jquery-3.7.1.js"
-        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous">
-        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous">
+    </script>
     <script>
         const photo = document.querySelector('[name="photo"]');
         photo.addEventListener("change", changeFileName, event);
