@@ -23,6 +23,7 @@
             <div class="row main__content-row main__form">
                 <form class="form" action="/controller/admin/update-info-person.php" enctype="multipart/form-data" method="post">
                     <input type="hidden" name="id" value="<?= $personId ?>">
+                    <input type="hidden" name="oldImage" value="<?= $emploee['Image'] ?>">
                     <a href="/resources/views/admin/admin-panel.php"><img class="form__close" src="/resources/images/admin/cross.svg" alt="Exit"></a>
                     <h1 class="form__name">Edit person</h1>
 

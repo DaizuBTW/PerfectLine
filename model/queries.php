@@ -1,11 +1,13 @@
 <?php
 
-function getFromTable(&$db, $table) {
+function getFromTable(&$db, $table)
+{
     $result = $db->query("SELECT * FROM $table");
     return $result;
 }
 
-function insertIntoTeam(&$db, $person) {
+function insertIntoTeam(&$db, $person)
+{
     $name = $person->getName();
     $position = $person->getPosition();
     $info = $person->getInfo();
@@ -20,19 +22,22 @@ function insertIntoTeam(&$db, $person) {
     return $result;
 }
 
-function deleteFromTeam(&$db, $id) {
+function deleteFromTeam(&$db, $id)
+{
     $result = $db->execute("DELETE FROM Team WHERE id = '$id'");
 
     return $result;
 }
 
-function getEmploeeFromTeam(&$db, $id) {
+function getEmploeeFromTeam(&$db, $id)
+{
     $result = $db->query("SELECT * FROM Team WHERE id = '$id'");
 
     return $result;
 }
 
-function updateEmploeeFromTeam(&$db, $person) {
+function updateEmploeeFromTeam(&$db, $person)
+{
     $id = $person->getID();
     $name = $person->getName();
     $position = $person->getPosition();
@@ -42,11 +47,10 @@ function updateEmploeeFromTeam(&$db, $person) {
     $linkEmail = $person->getLinkEmail();
     $image = $person->getImage();
 
-    $result = $db->execute("UPDATE Team SET Name = '$name', Position = '$position', Info = '$info', LinkInstagram = '$linkInstagram', LinkFacebook = '$linkFacebook', LinkEmail = '$linkEmail', Image = '$image' WHERE id = '$id'"); 
-    //$result = $db->execute("INSERT INTO Team (Name, Position, Info, LinkInstagram, LinkFacebook, LinkEmail, Image) 
-    //VALUES ('$name', '$position', '$info', '$linkInstagram', '$linkFacebook', '$linkEmail', '$image')");
-    //query("SELECT * FROM Team WHERE id = '$id'");
-
+    if ($image) {
+        $result = $db->execute("UPDATE Team SET Name = '$name', Position = '$position', Info = '$info', LinkInstagram = '$linkInstagram', LinkFacebook = '$linkFacebook', LinkEmail = '$linkEmail', Image = '$image' WHERE id = '$id'");
+    } else {
+        $result = $db->execute("UPDATE Team SET Name = '$name', Position = '$position', Info = '$info', LinkInstagram = '$linkInstagram', LinkFacebook = '$linkFacebook', LinkEmail = '$linkEmail' WHERE id = '$id'");
+    }
     return $result;
 }
-
