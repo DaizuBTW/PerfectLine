@@ -1,15 +1,5 @@
 <?php
 
-// function getAllEmploees(&$db) {
-//     $result = $db->query("SELECT * FROM Team");
-//     return $result;
-// }
-
-// function getCompanyInfo(&$db) {
-//     $result = $db->query("SELECT * FROM InfoCompany");
-//     return $result;
-// }
-
 function getFromTable(&$db, $table) {
     $result = $db->query("SELECT * FROM $table");
     return $result;
@@ -26,5 +16,13 @@ function insertIntoTeam(&$db, $person) {
 
     $result = $db->execute("INSERT INTO Team (Name, Position, Info, LinkInstagram, LinkFacebook, LinkEmail, Image) 
     VALUES ('$name', '$position', '$info', '$linkInstagram', '$linkFacebook', '$linkEmail', '$image')");
+
+    return $result;
+}
+
+function deleteFromTeam(&$db, $id) {
+    $result = $db->execute("DELETE FROM Team WHERE id = '$id'");
+
+    return $result;
 }
 
