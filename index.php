@@ -1,7 +1,9 @@
-<?php 
+<?php
+$root = $_SERVER['DOCUMENT_ROOT'];
 require "./controller/connection-to-database.php";
 require "./model/queries.php";
 $db = new Database;
+$templatePath = "./resources/views/layouts/person-template.php";
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +23,7 @@ $db = new Database;
     <header class="header">
         <div class="header__container">
             <img class="header__logo" src="resources/images/header/logo-main.svg" alt="PerfectLine">
-            <a class="header__link" href="resources/views/admin/forms/auth-form.html" target="_blank">LOGIN FOR
+            <a class="header__link" href="http://perfectline/resources/views/admin/admin-panel.php" target="_blank">LOGIN FOR
                 ADMIN</a>
 
             <h1 class="header__title">SAY HELLO TO<br><span>PERFECT LINE!</span></h1>
@@ -43,8 +45,8 @@ $db = new Database;
                     <h3 class="about-us__subtitle">main information of our company</h3>
                 </div>
                 <img class="about-us__image" src="resources/images/main/about-us/about.jpg" alt="About us">
-                <?php 
-                    require "./controller/info-company.php";
+                <?php
+                require "./controller/info-company.php";
                 ?>
             </div>
         </section>
@@ -95,8 +97,9 @@ $db = new Database;
                     <h3 class="team__subtitle">We are web development professionals who create exclusive software</h3>
                 </div>
                 <div class="team__gallery">
-                    <?php 
-                        require "./controller/all-info-team.php";
+                    <?php
+                    require "./controller/all-info-team.php";
+                    printEmploees($templatePath);
                     ?>
                 </div>
             </div>
