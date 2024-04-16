@@ -259,7 +259,6 @@ body {
   margin: 20px 0;
 }
 .form .form__auth-error-msg {
-  display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
