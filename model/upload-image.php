@@ -9,24 +9,15 @@ function uploadImage()
         $image = $_FILES['photo']['name'];
         global $path;
 
-        $name = uniqid(pathinfo($image)['filename']) . "." . pathinfo($image)['extension'];
+        if ($_POST['oldImage']) {
+            unlink($path . $_POST['oldImage']);
+        }
+
+        $name = uniqid() . "." . pathinfo($image)['extension'];
         move_uploaded_file($tmp_name, $path . $name);
 
         return $name;
     } else {
         return NULL;
-    }
-}
-
-function updateImage($oldImage)
-{
-    if ($_FILES['photo']['size'] != 0) {
-        global $path;
-
-        unlink($path . $oldImage);
-
-        return uploadImage();
-    } else {
-        return $oldImage;
     }
 }

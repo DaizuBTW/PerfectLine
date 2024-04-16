@@ -3,7 +3,7 @@ $root = $_SERVER['DOCUMENT_ROOT'];
 require "$root/controller/connection-to-database.php";
 require "$root/model/queries.php";
 $db = new Database;
-$templatePath = "../layouts/admin/admin-person-template.php"
+$templatePath = "../layouts/admin/admin-person-template.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">

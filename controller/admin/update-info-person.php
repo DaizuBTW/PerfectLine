@@ -5,7 +5,7 @@ require "$root/model/class-person.php";
 require "$root/model/upload-image.php";
 require "$root/model/queries.php";
 
-$imageName = updateImage($_POST['oldImage']);
+$imageName = uploadImage();
 $db = new Database;
 $person = new Person($_POST['name'], $_POST['position'], $_POST['description'], $_POST['instagram'], $_POST['facebook'], $_POST['mail'], $imageName);
 $person->setId($_POST['id']);

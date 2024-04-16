@@ -29,6 +29,13 @@ function deleteFromTeam(&$db, $id)
     return $result;
 }
 
+function getImageById(&$db, $id)
+{
+    $result = $db->query("SELECT Image FROM Team WHERE id = '$id'");
+
+    return $result[0]['Image'];
+}
+
 function getEmploeeFromTeam(&$db, $id)
 {
     $result = $db->query("SELECT * FROM Team WHERE id = '$id'");
@@ -47,7 +54,7 @@ function updateEmploeeFromTeam(&$db, $person)
     $linkEmail = $person->getLinkEmail();
     $image = $person->getImage();
 
-    if ($image) {
+    if ($image != NULL) {
         $result = $db->execute("UPDATE Team SET Name = '$name', Position = '$position', Info = '$info', LinkInstagram = '$linkInstagram', LinkFacebook = '$linkFacebook', LinkEmail = '$linkEmail', Image = '$image' WHERE id = '$id'");
     } else {
         $result = $db->execute("UPDATE Team SET Name = '$name', Position = '$position', Info = '$info', LinkInstagram = '$linkInstagram', LinkFacebook = '$linkFacebook', LinkEmail = '$linkEmail' WHERE id = '$id'");
