@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if(!$_SESSION['admin'] && !$_SESSION['pass']) {
+    header('Location: /controller/check-auth.php');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

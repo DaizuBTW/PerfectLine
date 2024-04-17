@@ -1,7 +1,11 @@
 <?php
+//session_set_cookie_params(3600);
 session_start();
 
-if(!$_SESSION['admin']) {
+$sessId = $_COOKIE["PHPSESSID"];
+setcookie("PHPSESSID", $sessId, time() + 3600, "/");
+
+if(!$_SESSION['admin'] && !$_SESSION['pass']) {
     header('Location: /controller/check-auth.php');
     exit;
 }
