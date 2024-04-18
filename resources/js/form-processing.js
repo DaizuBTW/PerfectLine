@@ -1,14 +1,20 @@
-$("#contact").submit(beforeSend, event);
+const form = document.getElementById("contact");
 
-function beforeSend(event) {
+function send(event) {
   event.preventDefault();
   const name = document.querySelector('[name="name"]').value;
-  const tel = document.querySelector('[name="tel"]').value;
-  const email = document.querySelector('[name="email"]').value;
-  const message = document.querySelector('[name="message"]').value;
-  success(name);
-}
+  
+  let client = new XMLHttpRequest();
+  let formData = new FormData(form)
 
-function success(name) {
-  alert(`Dear ${name}, your message has been sent successfully.`);
+  client.open('POST', './controller/form-processing-server.php', true);
+  client.send(formData);
+
+  client.onload = function() {
+    if (client.status != 200) {
+      alert(`Error, please try later.`);
+    } else {
+      alert(`Dear ${name}, your message has been sent successfully.`);
+    }
+  };
 }
