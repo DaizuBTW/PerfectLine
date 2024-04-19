@@ -106,7 +106,7 @@ $templatePath = "./resources/views/layouts/person-template.php";
         </section>
         <section class="contact">
             <div class="contact__inner">
-                <form class="contact__form" id="contact">
+                <form class="contact__form" id="contact" action="/controller/form-processing-server.php" method="post" onsubmit="send(event)">
                     <input class="contact__input" type="text" name="name" placeholder="Name*" required>
                     <input class="contact__input" type="tel" name="tel" placeholder="+375 (xx) xxx-xx-xx" pattern="^\+375[\s\-]?\(?(15|16|17|21|22|23|25|29|33|44)\)?[\s\-]?\d{3}[\s\-]?\d{2}[\s\-]?\d{2}$" required>
                     <input class="contact__input" type="email" name="email" placeholder="E-mail*" required>
@@ -162,10 +162,7 @@ $templatePath = "./resources/views/layouts/person-template.php";
             <p class="footer__copyright">© PerfectLine</p>
         </div>
     </footer>
-    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"
-        integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous">
-        </script> -->
-    <!-- <script src="resources/js/form-processing.js"></script> -->
+    <script src="resources/js/form-processing.js"></script>
     <script src="resources/js/popup.js"></script>
 </body>
 
