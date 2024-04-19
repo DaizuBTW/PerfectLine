@@ -21,23 +21,23 @@
         <main class="main">
             <div class="container main__container">
                 <div class="row main__content-row main__form">
-                    <form class="form" action="/resources/views/admin/admin-panel.html" method="post">
+                    <form class="form" action="/controller/check-auth.php" method="post">
                         <h1 class="form__name">Admin Authorization</h1>
                         <div class="row form__auth-row">
                             <label for="username" class="col form__auth-input-name">Login</label>
                         </div>
                         <div class="row form__auth-row">
-                            <input type="text" class="col form__auth-input" placeholder="Username" id="username" name="username">
+                            <input type="text" class="col form__auth-input <? if($_POST['wrongInput']) echo "form__input-error" ?>" placeholder="Username" id="username" name="username" required>
                         </div>
                         <div class="row form__auth-row">
                             <label for="password" class="col form__auth-input-name">Password</label>
                         </div>
                         <div class="row form__auth-row">
-                            <input type="password" class="col form__auth-input" placeholder="Your password" id="password" name="password">
+                            <input type="password" class="col form__auth-input <? if($_POST['wrongInput']) echo "form__input-error" ?>" placeholder="Your password" id="password" name="password" required>
                         </div>
                         <div class="row form__auth-row">
-                            <input class="col btn form__auth-submit-btn" type="submit" value="Sign in">
-                            <span class="col form__auth-error-msg">wrong password</span>
+                            <input class="col btn form__auth-submit-btn" type="submit" value="Sign in" name="submit">
+                            <span class="col form__auth-error-msg" <? if(!$_POST['wrongInput']) echo "style=\"display: none;\"" ?>>wrong login or password</span>
                         </div>
                         
                     </form>
