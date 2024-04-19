@@ -6,7 +6,8 @@ function checkAuth($username, $password)
     foreach ($admins as $admin) {
         if ($admin['Name'] === $username and $admin['Password'] === $password) {
             $_POST['wrongInput'] = null;
-            $_SESSION['admin'] = true;
+            $_SESSION['admin'] = $username;
+            $_SESSION['pass'] = $password;
             header('Location: /resources/views/admin/admin-panel.php');
             exit;
         }
