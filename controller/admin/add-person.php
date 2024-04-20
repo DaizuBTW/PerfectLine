@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if(!$_SESSION['admin'] && !$_SESSION['pass']) {
+if (!$_SESSION['admin'] && !$_SESSION['pass']) {
     header('Location: /controller/check-auth.php');
     exit;
 }
@@ -14,9 +14,12 @@ require "$root/model/queries.php";
 
 $imageName = uploadImage();
 $db = new Database;
-$person = new Person($_POST['name'], $_POST['position'], $_POST['description'], $_POST['instagram'], $_POST['facebook'], $_POST['mail'], $imageName);
-
-insertIntoTeam($db, $person);
+if (strlen($_POST['name']) <= 30 && strlen($_POST['position']) <= 20) {
+    $person = new Person($_POST['name'], $_POST['position'], $_POST['description'], $_POST['instagram'], $_POST['facebook'], $_POST['mail'], $imageName);
+    insertIntoTeam($db, $person);
+} else {
+    //TODO
+}
 
 header('Location: /resources/views/admin/admin-panel.php');
 exit;

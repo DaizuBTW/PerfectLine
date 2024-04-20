@@ -31,10 +31,10 @@ $templatePath = "./resources/views/layouts/person-template.php";
                 <button class="header__button" href="#contact">CONTACT US</button>
             </form>
 
-            <div class="header__logos">
+            <!-- <div class="header__logos">
                 <img src="resources/images/header/logo-blue.svg" alt="Blue logo">
                 <img src="resources/images/header/logo-purple.svg" alt="Purple logo">
-            </div>
+            </div> -->
         </div>
     </header>
     <main class="main">
@@ -107,7 +107,7 @@ $templatePath = "./resources/views/layouts/person-template.php";
         <section class="contact">
             <div class="contact__inner">
                 <form class="contact__form" id="contact" action="/controller/form-processing-server.php" method="post" onsubmit="send(event)">
-                    <input class="contact__input" type="text" name="name" placeholder="Name*" required>
+                    <input class="contact__input" type="text" name="name" placeholder="Name*" required maxlength="10">
                     <input class="contact__input" type="tel" name="tel" placeholder="+375 (xx) xxx-xx-xx" pattern="^\+375[\s\-]?\(?(15|16|17|21|22|23|25|29|33|44)\)?[\s\-]?\d{3}[\s\-]?\d{2}[\s\-]?\d{2}$" required>
                     <input class="contact__input" type="email" name="email" placeholder="E-mail*" required>
                     <textarea class="contact__textarea" name="message" placeholder="Message*" required></textarea>
