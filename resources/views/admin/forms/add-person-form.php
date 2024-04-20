@@ -36,35 +36,35 @@ if(!$_SESSION['admin'] && !$_SESSION['pass']) {
 
                     <div class="row form__row">
                         <label for="name" class="col-sm col-12 form__input-name">Name</label>
-                        <input class="col-9 form__input" type="text" id="name" name="name">
+                        <input class="col-9 form__input" type="text" id="name" name="name" required maxlength="30">
                     </div>
                     <div class="row form__row">
                         <label for="position" class="col-sm col-12 form__input-name">Position</label>
-                        <input class="col-9 form__input" type="text" id="position" name="position">
+                        <input class="col-9 form__input" type="text" id="position" name="position" required maxlength="20">
                     </div>
                     <div class="row form__row">
                         <label for="description" class="col-sm col-12 form__input-name">Description</label>
-                        <textarea class="col-9 form__textarea" type="text" id="description" name="description"></textarea>
+                        <textarea class="col-9 form__textarea" type="text" id="description" name="description" required></textarea>
                     </div>
                     <div class="row form__row">
                         <label for="photo" class="col-sm col-12 form__input-name">Photo</label>
                         <label class="col-9 form__input form__label">
                             <span class="form__input-span" id="photo-span">Choose file</span>
-                            <input class="form__input-file" type="file" id="photo" name="photo" accept=".jpg,.jpeg,.png">
+                            <input class="form__input-file" type="file" id="photo" name="photo" accept=".jpg,.jpeg,.png" required>
                             <span class="btn form__input-btn">Browse</span>
                         </label>
                     </div>
                     <div class="row form__row">
                         <label for="instagrm" class="col-sm col-12 form__input-name">Instagram</label>
-                        <input class="col-9 form__input" type="text" id="instagram" name="instagram">
+                        <input class="col-9 form__input" type="text" id="instagram" name="instagram" required>
                     </div>
                     <div class="row form__row">
                         <label for="facebook" class="col-sm col-12 form__input-name">Facebook</label>
-                        <input class="col-9 form__input" type="text" id="facebook" name="facebook">
+                        <input class="col-9 form__input" type="text" id="facebook" name="facebook" required>
                     </div>
                     <div class="row form__row">
                         <label for="mail" class="col-sm col-12 form__input-name">Mail</label>
-                        <input class="col-9 form__input" type="email" id="mail" name="mail">
+                        <input class="col-9 form__input" type="email" id="mail" name="mail" required>
                     </div>
                     <input class="btn form__submit-btn" type="submit" value="Save">
                 </form>

@@ -97,7 +97,7 @@ body {
 }
 
 .header {
-  padding: 43px 0 90px;
+  padding: 50px 0 80px;
   text-align: center;
   background-color: #EFF0F2;
 }
@@ -108,7 +108,7 @@ body {
 }
 .header .header__logo {
   width: 270.5px;
-  margin-bottom: 90px;
+  margin-bottom: 70px;
 }
 .header .header__link {
   position: absolute;
@@ -127,8 +127,8 @@ body {
   color: #888888;
 }
 .header .header__title {
-  margin-bottom: 60px;
-  line-height: 70px;
+  margin-bottom: 80px;
+  line-height: 65px;
   letter-spacing: 2.7px;
   font-size: 45px;
   font-weight: 700;
@@ -142,8 +142,8 @@ body {
 }
 .header .header__button {
   width: 232px;
-  height: 53px;
-  margin: 0 auto 90px;
+  height: 60px;
+  margin: 0 auto;
   border: 2px solid rgba(0, 0, 0, 0.5019607843);
   border-radius: 2;
   line-height: 28px;
@@ -212,7 +212,7 @@ body {
 }
 
 .works {
-  padding: 123px 0 122px;
+  padding: 100px 0 100px;
   text-align: center;
   background-color: #ffffff;
 }
@@ -230,7 +230,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 114px;
+  padding-top: 100px;
 }
 .works .works__card {
   margin: 7.5px;
@@ -241,7 +241,7 @@ body {
 }
 
 .team {
-  padding: 99px 0 171px;
+  padding: 100px 0 100px;
   text-align: center;
   background-color: #EFF0F2;
 }
@@ -259,7 +259,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 114px;
+  padding-top: 100px;
 }
 .team .team__pop-up-card {
   display: none;
@@ -365,6 +365,8 @@ body {
 .team .team__photo {
   width: 370px;
   height: 440px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .contact {
@@ -695,7 +697,7 @@ body {
     width: 100%;
     max-width: 300px;
     min-height: 172px;
-    max-height: 240px;
+    max-height: none;
   }
   .team .team__triangle {
     top: 102px;
@@ -719,7 +721,6 @@ body {
   }
   .team .team__photo {
     width: 100%;
-    height: 100%;
     max-width: 320px;
     border: 1px solid #000000;
   }
@@ -732,7 +733,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    max-width: 768px;
+    max-width: 540px;
   }
   .contact .contact__form {
     width: 100%;

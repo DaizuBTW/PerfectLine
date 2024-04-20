@@ -38,15 +38,15 @@ if(!$_SESSION['admin'] && !$_SESSION['pass']) {
 
                     <div class="row form__row">
                         <label for="name" class="col-sm col-12 form__input-name">Name</label>
-                        <input class="col-9 form__input" type="text" id="name" name="name" value="<?= $emploee['Name'] ?>">
+                        <input class="col-9 form__input" type="text" id="name" name="name" value="<?= $emploee['Name'] ?>" required maxlength="30">
                     </div>
                     <div class="row form__row">
                         <label for="position" class="col-sm col-12 form__input-name">Position</label>
-                        <input class="col-9 form__input" type="text" id="position" name="position" value="<?= $emploee['Position'] ?>">
+                        <input class="col-9 form__input" type="text" id="position" name="position" value="<?= $emploee['Position'] ?>" required maxlength="20">
                     </div>
                     <div class="row form__row">
                         <label for="description" class="col-sm col-12 form__input-name">Description</label>
-                        <textarea class="col-9 form__textarea" type="text" id="description" name="description" placeholder="I'm an expert in Graphics, Website and can also develop sites in WordPress, JQuery."><?= $emploee['Info'] ?></textarea>
+                        <textarea class="col-9 form__textarea" type="text" id="description" name="description" placeholder="I'm an expert in Graphics, Website and can also develop sites in WordPress, JQuery." required><?= $emploee['Info'] ?></textarea>
                     </div>
                     <div class="row form__row">
                         <label for="photo" class="col-sm col-12 form__input-name">Photo</label>
@@ -58,15 +58,15 @@ if(!$_SESSION['admin'] && !$_SESSION['pass']) {
                     </div>
                     <div class="row form__row">
                         <label for="instagrm" class="col-sm col-12 form__input-name">Instagram</label>
-                        <input class="col-9 form__input" type="text" id="instagram" name="instagram" value="<?= $emploee['LinkInstagram'] ?>">
+                        <input class="col-9 form__input" type="text" id="instagram" name="instagram" value="<?= $emploee['LinkInstagram'] ?>" required>
                     </div>
                     <div class="row form__row">
                         <label for="facebook" class="col-sm col-12 form__input-name">Facebook</label>
-                        <input class="col-9 form__input" type="text" id="facebook" name="facebook" value="<?= $emploee['LinkFacebook'] ?>">
+                        <input class="col-9 form__input" type="text" id="facebook" name="facebook" value="<?= $emploee['LinkFacebook'] ?>" required>
                     </div>
                     <div class="row form__row">
                         <label for="mail" class="col-sm col-12 form__input-name">Mail</label>
-                        <input class="col-9 form__input" type="email" id="mail" name="mail" value="<?= $emploee['LinkEmail'] ?>">
+                        <input class="col-9 form__input" type="email" id="mail" name="mail" value="<?= $emploee['LinkEmail'] ?>" required>
                     </div>
 
                     <input class="btn form__submit-btn" type="submit" value="Save">
