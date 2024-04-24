@@ -17,4 +17,5 @@ function send(event) {
       alert(`Dear ${name}, your message has been sent successfully.`);
     }
   };
+  form.reset();
 }

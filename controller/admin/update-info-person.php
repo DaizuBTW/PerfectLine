@@ -14,14 +14,12 @@ require "$root/model/queries.php";
 
 $imageName = uploadImage();
 $db = new Database;
-if (strlen($_POST['name']) <= 30 && strlen($_POST['position']) <= 20) {
-    $person = new Person($_POST['name'], $_POST['position'], $_POST['description'], $_POST['instagram'], $_POST['facebook'], $_POST['mail'], $imageName);
-    $person->setId($_POST['id']);
 
-    updateEmploeeFromTeam($db, $person);
-} else {
-    //TODO
-}
+$person = new Person($_POST['name'], $_POST['position'], $_POST['description'], $_POST['instagram'], $_POST['facebook'], $_POST['mail'], $imageName);
+$person->setId($_POST['id']);
+
+updateEmploeeFromTeam($db, $person);
+
 
 header('Location: /resources/views/admin/admin-panel.php');
 exit;
